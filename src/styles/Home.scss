@@ -1,0 +1,408 @@
+%sam1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+%sam2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+%sam3 {
+    text-align: left;
+    margin-left: 5px;
+    line-height: 5px;
+}
+
+%sam4 {
+    height: 4.5vw;
+    max-height: 20vw;
+    margin-top: 1vw;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 50%;
+    padding: 5px 0;
+    border-radius: 10px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+    p {
+        @extend %sam3;
+        font-size: 0.8vw;
+    }
+    h3 {
+        @extend %sam3;
+        font-size: 1.2vw;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.home {
+    display: flex;
+    width: 72%;
+    margin: auto;
+    margin-top: 2vw;
+}
+
+.sideBar {
+    background-color: #fff;
+    @extend %sam2;
+    flex: 22%;
+    border: 2px solid #0f4791;
+    border-radius: 5px;
+    max-height: 80vw;
+    height: 25vw;
+    margin-top: 4px;
+}
+
+.mainBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 78%;
+    flex-wrap: wrap;
+}
+
+.sideBarTitle {
+    margin-top: 0;
+    background-color: #4d1936;
+    height: 2.5vw;
+    max-height: 10vw;
+    width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    @extend %sam2;
+    p {
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.2vw;
+    }
+}
+
+.sideBarMenu {
+    @extend %sam2;
+    height: 100%;
+    width: 100%;
+    a {
+        color: #4D1936;
+        text-decoration: none;
+        font-size: 1.3vw;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 0.2vw;
+    }
+    a:hover {
+        background-color: gray;
+        width: 100%;
+    }
+}
+
+.adminMainBody {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    height: auto;
+    align-items: center;
+    place-items: center;
+}
+
+.adminMainBody .items {
+    width: 18vw;
+    height: 12.4vw;
+    border: 2px solid #0f4791;
+    border-radius: 10px;
+    margin: 3px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+.adminMainBody {
+    .viewItem {
+        width: 18vw;
+        height: 12.4vw;
+        border: 2px solid #0f4791;
+        border-radius: 10px;
+        margin: 3px;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        .itemTitle {
+            background-color: #4D1936;
+            @extend %sam2;
+            height: 2.4vw;
+            p {
+                color: #fff;
+                font-size: 1.2vw;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.itemContent {
+    @extend %sam1;
+    .itemContentLeft {
+        @extend %sam4;
+    }
+    .itemContentRight {
+        @extend %sam4;
+    }
+}
+
+.itemFooter {
+    @extend %sam1;
+    height: 2.5vw;
+    background-color: #E5D9B3;
+    margin-top: 1vw;
+    .itemFooterTitle {
+        color: #4D1936;
+        @extend %sam1;
+        justify-content: flex-end;
+        flex: 70%;
+        font-size: 1.4vw;
+        font-weight: 600;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 0.2vw;
+    }
+    .itemFooterIcon {
+        @extend %sam1;
+        flex: 30%;
+        color: #4D1936;
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+    .sideBar {
+        height: 35vw;
+    }
+    .sideBarMenu {
+        width: 19vw;
+    }
+    .sideBarTitle {
+        height: 3vw;
+    }
+    .sideBarTitle p {
+        font-size: 1.7vw;
+    }
+    .sideBar .sideBarMenu a {
+        font-size: 1.5vw;
+        padding: 0.5vw;
+    }
+    .adminMainBody {
+        grid-template-columns: 1fr 1fr;
+        .items {
+            width: 26vw;
+            height: 18vw;
+        }
+        .viewItem {
+            width: 26vw;
+            height: 18vw;
+            .itemTitle {
+                height: 3vw;
+                p {
+                    font-size: 1.7vw;
+                }
+            }
+            .itemContentLeft {
+                height: 7vw;
+                p {
+                    font-size: 1.2vw;
+                }
+                h3 {
+                    font-size: 1.8vw;
+                }
+            }
+            .itemContentRight {
+                height: 7vw;
+                p {
+                    font-size: 1.2vw;
+                }
+                h3 {
+                    font-size: 1.8vw;
+                }
+            }
+            .itemFooter {
+                height: 4vw;
+                .itemFooterTitle {
+                    font-size: 2vw;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .sideBar .sideBarMenu a {
+        font-size: 1.5vw;
+    }
+    .adminMainBody {
+        grid-template-columns: 1fr 1fr;
+        .items {
+            width: 26vw;
+            height: 15vw;
+        }
+        .viewItem {
+            width: 26vw;
+            height: 15vw;
+            .itemContentLeft {
+                height: 5vw;
+                p {
+                    font-size: 1.0vw;
+                }
+                h3 {
+                    font-size: 1.5vw;
+                }
+            }
+            .itemContentRight {
+                height: 5vw;
+                p {
+                    font-size: 1.0vw;
+                }
+                h3 {
+                    font-size: 1.5vw;
+                }
+            }
+            .itemFooter {
+                height: 3.5vw;
+                .itemFooterTitle {
+                    font-size: 2vw;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .sideBar {
+        height: 50vw;
+        margin-left: 2vw;
+    }
+    .sideBarTitle {
+        height: 5vw;
+        p {
+            font-size: 2.5vw;
+        }
+    }
+    .sideBarMenu {
+        width: 27vw;
+    }
+    .sideBar .sideBarMenu a {
+        font-size: 2.5vw;
+    }
+    .adminMainBody {
+        grid-template-columns: 1fr;
+        .items {
+            width: 37vw;
+            height: 27vw;
+        }
+        .viewItem {
+            width: 37vw;
+            height: 27vw;
+            .itemTitle {
+                height: 5vw;
+                p {
+                    font-size: 2.5vw;
+                }
+            }
+            .itemContentLeft {
+                height: 10vw;
+                margin-top: 1.2vw 0vw;
+                margin-bottom: 0.5vw;
+                p {
+                    font-size: 1.8vw;
+                }
+                h3 {
+                    font-size: 2.5vw;
+                }
+            }
+            .itemContentRight {
+                height: 10vw;
+                margin-top: 1.2vw;
+                margin-bottom: 0.5vw;
+                p {
+                    font-size: 1.8vw;
+                }
+                h3 {
+                    font-size: 2.5vw;
+                }
+            }
+            .itemFooter {
+                height: 6vw;
+                .itemFooterTitle {
+                    font-size: 3vw;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .home {
+        display: flex;
+        flex-direction: column;
+        .sideBar {
+            flex: 100%;
+            width: 55vw;
+            margin: auto;
+            .sideBarMenu a {
+                font-size: 4vw;
+            }
+        }
+        .mainBody {
+            flex: 100%;
+        }
+    }
+    .sideBarTitle {
+        height: 7vw;
+        p {
+            font-size: 4vw;
+        }
+    }
+    .sideBar .sideBarMenu {
+        height: 70vw;
+        width: 100%;
+    }
+    .adminMainBody {
+        .items {
+            width: 55vw;
+            height: 40vw;
+        }
+        .viewItem {
+            width: 55vw;
+            height: 40vw;
+            .itemTitle {
+                height: 7vw;
+                p {
+                    font-size: 4vw;
+                }
+            }
+            .itemContentLeft {
+                height: 16vw;
+                p {
+                    font-size: 2.5vw;
+                }
+                h3 {
+                    font-size: 4vw;
+                }
+            }
+            .itemContentRight {
+                height: 16vw;
+                p {
+                    font-size: 2.5vw;
+                }
+                h3 {
+                    font-size: 4vw;
+                }
+            }
+            .itemFooter {
+                height: 9vw;
+                .itemFooterTitle {
+                    font-size: 4.5vw;
+                }
+            }
+        }
+    }
+}
