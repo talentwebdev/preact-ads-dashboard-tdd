@@ -1,0 +1,232 @@
+%sam3 {
+    text-align: left;
+    margin-left: 5px;
+    line-height: 5px;
+}
+
+%sam4 {
+    height: 4.5vw;
+    max-height: 20vw;
+    margin-top: 1vw;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 50%;
+    padding: 5px 0;
+    border-radius: 10px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+    p {
+        @extend %sam3;
+        font-size: 0.8vw;
+    }
+    h3 {
+        @extend %sam3;
+        font-size: 1.2vw;
+    }
+}
+
+%sam5 {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.home {
+    display: flex;
+    width: 72%;
+    margin: auto;
+    margin-top: 2vw;
+}
+
+.sideBar {
+    background-color: $primary-color;
+    @include alignItems-5;
+    flex: 22%;
+    border: 2px solid $primaryBorderColor;
+    border-radius: $borderRadius-1;
+    max-height: 80vw;
+    height: 25vw;
+    margin-top: 4px;
+}
+
+.mainBody {
+    @include alignItems-5;
+    flex: 78%;
+    flex-wrap: wrap;
+}
+
+.sideBarTitle {
+    margin-top: 0;
+    background-color: $title-bg-color;
+    height: 2.5vw;
+    max-height: 10vw;
+    width: 100%;
+    overflow: hidden;
+    @include alignItems-5;
+    p {
+        color: $primary-color;
+        font-weight: $FontWeight-2;
+        font-size: 1.2vw;
+    }
+}
+
+.sideBarMenu {
+    @include alignItems-5;
+    height: 100%;
+    width: 100%;
+    a {
+        color: $title-bg-color;
+        text-decoration: none;
+        font-size: 1.3vw;
+        font-family: $homeSideBar-font-family;
+        padding: 0.2vw;
+    }
+    a:hover {
+        background-color: $homeSideBar-ItemHoverColor;
+        width: 100%;
+    }
+}
+
+.adminMainBody {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    height: auto;
+    align-items: center;
+}
+
+.adminMainBody .items {
+    width: 18vw;
+    height: 12.4vw;
+    border: 2px solid $primaryBorderColor;
+    border-radius: $mainBodyItemBorderRadius;
+    margin: 3px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+.adminMainBody {
+    .viewItem {
+        width: 18vw;
+        height: 12.4vw;
+        border: 2px solid $primaryBorderColor;
+        border-radius: $mainBodyItemBorderRadius;
+        margin: 3px;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        .itemTitle {
+            background-color: $title-bg-color;
+            @include alignItems-5;
+            height: 2.4vw;
+            p {
+                color: $primary-color;
+                font-size: 1.2vw;
+                font-weight: $FontWeight-2;
+            }
+        }
+    }
+    .searchItem {
+        width: 18vw;
+        height: 12.4vw;
+        border: 2px solid $primaryBorderColor;
+        border-radius: $mainBodyItemBorderRadius;
+        overflow: hidden;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+        #itemTitle {
+            background-color: $title-bg-color;
+            height: 2.4vw;
+            @include alignItems-5;
+            p {
+                color: $primary-color;
+                font-size: 1.2vw;
+                font-weight: $FontWeight-2;
+            }
+        }
+        #itemBody {
+            background-color: $mainBodyItem-bg-color;
+            margin-bottom: 0.5vw;
+            margin-top: 0.5vw;
+            height: 8.6vw;
+            color: $title-bg-color;
+            svg {
+                font-size: 5vw;
+                @extend %sam5;
+            }
+            h3 {
+                @extend %sam5;
+                font-size: 1.6vw;
+                font-weight: $FontWeight-2;
+                font-family: $mainHeader-font-family-2;
+            }
+        }
+    }
+    .myLinks {
+        width: 18vw;
+        height: 12.4vw;
+        border: 2px solid $primaryBorderColor;
+        border-radius: $mainBodyItemBorderRadius;
+        overflow: hidden;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+        #title {
+            background-color: $title-bg-color;
+            height: 2.4vw;
+            @include alignItems-5;
+            p {
+                color: $primary-color;
+                font-size: 1.2vw;
+                font-weight: $FontWeight-2;
+            }
+        }
+        #body {
+            @include alignItems-5;
+            height: 8.6vw;
+            margin-top: 0.5vw;
+            a {
+                background-color: $mainBodyItem-bg-color;
+                width: 100%;
+                margin: 0.3vw;
+                padding: 0.5vw;
+                color: $title-bg-color;
+                font-size: 1.3vw;
+                font-weight: $FontWeight-2;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.itemContent {
+    @include alignItems-1;
+    .itemContentLeft {
+        @extend %sam4;
+    }
+    .itemContentRight {
+        @extend %sam4;
+    }
+}
+
+.itemFooter {
+    @include alignItems-1;
+    height: 2.5vw;
+    background-color: $mainBodyItem-bg-color;
+    margin-top: 1vw;
+    .itemFooterTitle {
+        color: $title-bg-color;
+        @include alignItems-1;
+        justify-content: flex-end;
+        flex: 70%;
+        font-size: 1.4vw;
+        font-weight: $FontWeight-2;
+        font-family: $homeSideBar-font-family;
+        padding: 0.2vw;
+    }
+    .itemFooterIcon {
+        @include alignItems-1;
+        flex: 30%;
+        color: $title-bg-color;
+    }
+    svg {
+        font-size: 50px;
+    }
+}

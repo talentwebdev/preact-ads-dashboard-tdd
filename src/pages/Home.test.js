@@ -1,12 +1,15 @@
-import {shallow} from 'enzyme';
-import Home from './Home';
+import { shallow } from "enzyme";
+import Home from "./Home";
 
-describe('Home', () => {
-    let homeContainer;
+describe("Home", () => {
+  let homeContainer;
 
-    beforeEach(() => homeContainer = shallow(<Home />));
+  beforeEach(() => (homeContainer = shallow(<Home />)));
 
-    it('should render the div element', () => {
-        expect(homeContainer.find('div')).toBeTruthy();
-    });
-})
+  it("should render the div element", () => {
+    expect(homeContainer.find("div")).toBeTruthy();
+  });
+  it("renders Home correctly", () => {
+    expect(homeContainer).toMatchSnapshot();
+  });
+});

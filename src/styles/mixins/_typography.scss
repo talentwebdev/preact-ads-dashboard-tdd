@@ -1,0 +1,92 @@
+@mixin alignSam {
+    display: flex;
+    align-items: center;
+}
+
+@mixin alignSam-1 {
+    @include alignSam;
+    flex-direction: row;
+}
+
+@mixin alignSam-2 {
+    @include alignSam;
+    flex-direction: column;
+}
+
+//Align Items
+@mixin alignItems-1 {
+    @include alignSam-1;
+    justify-content: flex-start;
+}
+
+@mixin alignItems-2 {
+    @include alignSam-1;
+    justify-content: center;
+}
+
+@mixin alignItems-3 {
+    @include alignSam-1;
+    justify-content: flex-end;
+}
+
+@mixin alignItems-4 {
+    @include alignSam-2;
+    justify-content: flex-start;
+}
+
+@mixin alignItems-5 {
+    @include alignSam-2;
+    justify-content: center;
+}
+
+@mixin alignItems-6 {
+    @include alignSam-2;
+    justify-content: flex-end;
+}
+
+//MainNav FontSize and Margins
+@mixin mainNavFontStyles-1150Screen {
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+@mixin mainNavFontStyles-850Screen {
+    font-size: 14px;
+    margin-right: 7px;
+}
+
+@mixin mainNavFontStyles-768Screen {
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+@mixin mainNavFontStyles-650Screen {
+    font-size: 11px;
+    margin-right: 2px;
+}
+
+//Mobile Menu Styles
+@mixin mobileMenuMainStyles {
+    position: absolute;
+    top: 50px;
+    background-color: #000;
+    max-height: 600px;
+    height: auto;
+    left: 0;
+    width: 100%;
+    transform: translateX(-100%, 60%);
+    transition: all 0.5s ease;
+}
+
+@mixin mobileMenuTextStyles {
+    font-size: 20px;
+    padding: 15px;
+}
+
+@mixin mobileMenuTextHoverStyles {
+    background-color: #f9f9f9;
+    color: #000;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+}

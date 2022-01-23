@@ -5,7 +5,6 @@ import Logo2 from "../assets/proimg.jpg";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import "../styles/MainNav.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
@@ -40,46 +39,46 @@ function MainNav() {
         <div id="logoImg">
           <Link to="/">
             <img src={Logo} alt="BHHS" />
-          </Link>{" "}
-        </div>{" "}
-      </div>{" "}
+          </Link>
+        </div>
+      </div>
       <div className="leftSide">
         <div className="links" id={showLinks ? "hidden" : ""}>
           <Link onClick={toggleNav} className="items" to="/">
-            Home{" "}
-          </Link>{" "}
+            Home
+          </Link>
           <Link onClick={toggleNav} className="items" to="/products">
-            Products{" "}
-          </Link>{" "}
+            Products
+          </Link>
           <Link onClick={toggleNav} className="items" to="/newsroom">
-            Newsroom{" "}
-          </Link>{" "}
+            Newsroom
+          </Link>
           <Link onClick={toggleNav} className="items" to="/contact">
-            Contact{" "}
-          </Link>{" "}
+            Contact
+          </Link>
           <Link onClick={toggleNav} className="items" to="/faq">
-            FAQ{" "}
-          </Link>{" "}
+            FAQ
+          </Link>
           <Link onClick={toggleNav} className="items" to="/tutorial">
-            Tutorial{" "}
-          </Link>{" "}
+            Tutorial
+          </Link>
           <Link onClick={toggleNav} className="items" to="/partners">
-            Partners{" "}
-          </Link>{" "}
-        </div>{" "}
+            Partners
+          </Link>
+        </div>
         {showLinks ? (
           <FaTimes onClick={toggleNav} className="btn" />
         ) : (
           <FaBars className="btn" onClick={toggleNav} />
-        )}{" "}
-      </div>{" "}
+        )}
+      </div>
       <div className="rightSide">
         <div id="proImg">
-          <img src={Logo2} alt="BHHS" onClick={handleClick} />{" "}
-        </div>{" "}
+          <img src={Logo2} alt="BHHS" onClick={handleClick} />
+        </div>
         <div id="proMenu">
-          <ArrowDropDownIcon className="arrowBtn" onClick={handleClick} />{" "}
-          <p onClick={handleClick}> John Smith </p>{" "}
+          <ArrowDropDownIcon className="arrowBtn" onClick={handleClick} />
+          <p onClick={handleClick}> John Smith </p>
           <Menu
             id="simple-menu"
             anchorEl={anchorEl}
@@ -87,11 +86,11 @@ function MainNav() {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem> Profile </MenuItem> <MenuItem> My account </MenuItem>{" "}
-            <MenuItem> Logout </MenuItem>{" "}
-          </Menu>{" "}
-        </div>{" "}
-      </div>{" "}
+            <MenuItem> Profile </MenuItem> <MenuItem> My account </MenuItem>
+            <MenuItem> Logout </MenuItem>
+          </Menu>
+        </div>
+      </div>
     </div>
   );
 }

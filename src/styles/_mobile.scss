@@ -1,0 +1,679 @@
+@import "./mixins/breakpoints";
+@import "./mixins/typography";
+@include breakpoint("max-xxl-1") {
+    .home {
+        .sideBar {
+            height: 35vw;
+            .sideBarTitle {
+                height: 3vw;
+                p {
+                    font-size: 1.7vw;
+                }
+            }
+            .sideBarMenu {
+                width: 19vw;
+                a {
+                    font-size: 1.5vw;
+                    padding: 0.5vw;
+                }
+            }
+        }
+        .mainBody {
+            .adminMainBody {
+                grid-template-columns: 1fr 1fr;
+                .viewItem {
+                    width: 26vw;
+                    height: 18vw;
+                    .itemTitle {
+                        height: 3vw;
+                        p {
+                            font-size: 1.7vw;
+                        }
+                    }
+                    .itemContent {
+                        padding: 0.4vw 0;
+                        .itemContentLeft {
+                            height: 7vw;
+                            p {
+                                font-size: 1.2vw;
+                            }
+                            h3 {
+                                font-size: 1.8vw;
+                            }
+                        }
+                        .itemContentRight {
+                            height: 7vw;
+                            p {
+                                font-size: 1.2vw;
+                            }
+                            h3 {
+                                font-size: 1.8vw;
+                            }
+                        }
+                    }
+                    .itemFooter {
+                        height: 4vw;
+                        .itemFooterTitle {
+                            font-size: 2vw;
+                        }
+                        svg {
+                            margin-left: 1vw;
+                        }
+                    }
+                }
+                .searchItem {
+                    width: 26vw;
+                    height: 18vw;
+                    #itemTitle {
+                        height: 3vw;
+                        p {
+                            font-size: 1.7vw;
+                        }
+                    }
+                    #itemBody {
+                        height: 13.1vw;
+                        margin-top: 0.7vw;
+                        svg {
+                            font-size: 10vw;
+                        }
+                        h3 {
+                            font-size: 2vw;
+                        }
+                    }
+                }
+                .myLinks {
+                    width: 26vw;
+                    height: 18vw;
+                    #title {
+                        height: 3vw;
+                        p {
+                            font-size: 1.7vw;
+                        }
+                    }
+                    #body {
+                        height: 13.1vw;
+                        margin-top: 0.7vw;
+                        a {
+                            font-size: 2vw;
+                            padding: 0.75vw;
+                            margin: 0.4vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint("max-xl-1") {
+    .mainNav {
+        .rightSide {
+            @include alignItems-1;
+            #proMenu {
+                p {
+                    margin-right: $mainNav-marginRight-850Screen;
+                }
+            }
+        }
+    }
+    .home {
+        .sideBar {
+            .sideBarMenu a {
+                font-size: 1.5vw;
+            }
+        }
+        .mainBody {
+            .adminMainBody {
+                grid-template-columns: 1fr 1fr;
+                .viewItem {
+                    width: 26vw;
+                    height: 18vw;
+                    .itemContent {
+                        padding: 0;
+                        .itemContentLeft {
+                            height: 7vw;
+                            p {
+                                font-size: 1vw;
+                            }
+                            h3 {
+                                font-size: 1.5vw;
+                            }
+                        }
+                        .itemContentRight {
+                            height: 7vw;
+                            p {
+                                font-size: 1vw;
+                            }
+                            h3 {
+                                font-size: 1.5vw;
+                            }
+                        }
+                    }
+                    .itemFooter {
+                        height: 4.5vw;
+                        .itemFooterTitle {
+                            font-size: 2vw;
+                        }
+                    }
+                }
+                .searchItem {
+                    width: 26vw;
+                    height: 18vw;
+                    #itemBody {
+                        height: 12.9vw;
+                        margin-top: 0.7vw;
+                        svg {
+                            font-size: 9vw;
+                        }
+                        h3 {
+                            font-size: 2.5vw;
+                        }
+                    }
+                }
+                .myLinks {
+                    width: 26vw;
+                    height: 18vw;
+                    #title {
+                        height: 3vw;
+                        p {
+                            font-size: 1.7vw;
+                        }
+                    }
+                    #body {
+                        height: 13.1vw;
+                        margin-top: 0.7vw;
+                        a {
+                            font-size: 2vw;
+                            padding: 0.75vw;
+                            margin: 0.4vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint("max-lg-2") {
+    .mainNav {
+        .leftSide {
+            .links a {
+                @include mainNavFontStyles-1150Screen;
+            }
+        }
+    }
+    .mainHeader {
+        .topSide h1 {
+            font-size: 50px;
+        }
+        .bottomSide {
+            .btLeftSide {
+                height: 14vh;
+                .subLeft {
+                    .subLeftTop h5 {
+                        font-size: 20px;
+                    }
+                    .subLeftBottom p {
+                        font-size: 12px;
+                    }
+                }
+                .subRight p {
+                    font-size: 15px;
+                }
+            }
+            .btRightSide {
+                height: 14vh;
+            }
+        }
+    }
+}
+
+@include breakpoint("max-lg-1") {}
+
+@include breakpoint("max-md-2") {
+    .mainNav {
+        .rightSide {
+            #proImg {
+                @include alignItems-1;
+            }
+        }
+    }
+    .mainHeader {
+        .bottomSide {
+            .btLeftSide {
+                height: 13.5vh;
+            }
+            .btRightSide {
+                height: 13.5vh;
+                #rightSide h2 {
+                    color: $primary-color;
+                    font-size: 2vw;
+                    font-family: $mainHeader-font-family-2;
+                }
+            }
+        }
+    }
+    .home {
+        .sideBar {
+            height: 50vw;
+            margin-left: 2vw;
+            .sideBarTitle {
+                height: 5vw;
+                p {
+                    font-size: 2.5vw;
+                }
+            }
+            .sideBarMenu {
+                width: 27vw;
+                a {
+                    font-size: 2.5vw;
+                }
+            }
+        }
+        .mainBody {
+            .adminMainBody {
+                grid-template-columns: 1fr;
+                .viewItem {
+                    width: 37vw;
+                    height: 27vw;
+                    .itemTitle {
+                        height: 5vw;
+                        p {
+                            font-size: 2.5vw;
+                        }
+                    }
+                    .itemContent {
+                        padding: 0.5vw 0;
+                        .itemContentLeft {
+                            height: 10vw;
+                            margin-top: 1.2vw 0vw;
+                            margin-bottom: 0.5vw;
+                            p {
+                                font-size: 1.8vw;
+                            }
+                            h3 {
+                                font-size: 2.5vw;
+                            }
+                        }
+                        .itemContentRight {
+                            height: 10vw;
+                            margin-top: 1.2vw;
+                            margin-bottom: 0.5vw;
+                            p {
+                                font-size: 1.8vw;
+                            }
+                            h3 {
+                                font-size: 2.5vw;
+                            }
+                        }
+                    }
+                    .itemFooter {
+                        height: 6vw;
+                        .itemFooterTitle {
+                            font-size: 3vw;
+                        }
+                    }
+                }
+                .searchItem {
+                    width: 37vw;
+                    height: 27vw;
+                    margin-top: 0.5vw;
+                    #itemTitle {
+                        height: 5vw;
+                        p {
+                            font-size: 2.5vw;
+                        }
+                    }
+                    #itemBody {
+                        height: 19.5vw;
+                        margin-top: 1vw;
+                        margin-bottom: 1vw;
+                        svg {
+                            font-size: 14vw;
+                        }
+                        h3 {
+                            font-size: 3.3vw;
+                        }
+                    }
+                }
+                .myLinks {
+                    width: 37vw;
+                    height: 27vw;
+                    margin-top: 0.5vw;
+                    #title {
+                        height: 5vw;
+                        p {
+                            font-size: 2.5vw;
+                        }
+                    }
+                    #body {
+                        height: 19.5vw;
+                        margin-top: 1vw;
+                        a {
+                            font-size: 3vw;
+                            padding: 0.9vw;
+                            margin: 0.5vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint("max-md-1") {
+    .mainNav {
+        .leftSide {
+            .links a {
+                @include mainNavFontStyles-850Screen;
+            }
+        }
+    }
+    .mainHeader {
+        .bottomSide {
+            .btLeftSide {
+                .subRight p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint("max-md") {
+    .mainNav {
+        .leftSide {
+            .links a {
+                @include mainNavFontStyles-768Screen;
+            }
+        }
+    }
+    .mainHeader {
+        .topSide h1 {
+            font-size: 40px;
+        }
+        .bottomSide {
+            .btLeftSide {
+                height: 13vh;
+                .subLeft {
+                    .subLeftTop h5 {
+                        font-size: 18px;
+                    }
+                    .subLeftBottom p {
+                        font-size: 10px;
+                    }
+                }
+                .subRight p {
+                    font-size: 12px;
+                }
+            }
+            .btRightSide {
+                height: 13vh;
+            }
+        }
+    }
+}
+
+@include breakpoint("max-sm-2") {
+    .mainNav {
+        .leftSide {
+            .links a {
+                @include mainNavFontStyles-650Screen;
+            }
+        }
+        .rightSide {
+            #proMenu p {
+                display: none;
+                p {
+                    padding: 0;
+                    font-size: $mainNav-proMenuTitle-fontSize;
+                }
+            }
+        }
+    }
+    .mainHeader {
+        .topSide h1 {
+            font-size: 38px;
+        }
+        .bottomSide {
+            .btLeftSide {
+                height: 12vh;
+                .subLeft {
+                    .subLeftTop h5 {
+                        font-size: 15px;
+                    }
+                    .subLeftBottom p {
+                        font-size: 9px;
+                    }
+                }
+                .subRight p {
+                    font-size: 11px;
+                    padding: 5px;
+                }
+            }
+            .btRightSide {
+                height: 12vh;
+            }
+        }
+    }
+}
+
+@include breakpoint("max-sm-1") {
+    .mainNav {
+        max-width: 100%;
+        .leftSide {
+            svg {
+                @include alignItems-2;
+            }
+            .links {
+                display: none;
+                .items:nth-child(1) {
+                    margin-top: $mainNav-linksFirstItem-marginTop;
+                }
+            }
+            #hidden {
+                @include alignItems-2;
+                @include mobileMenuMainStyles;
+                a {
+                    @include mobileMenuTextStyles;
+                }
+                a:hover {
+                    @include mobileMenuTextHoverStyles;
+                }
+            }
+        }
+    }
+    .mainHeader {
+        .topSide {
+            width: 100%;
+            h1 {
+                font-size: 7vw;
+            }
+        }
+        .bottomSide {
+            width: 100%;
+            .btLeftSide {
+                @include alignItems-2;
+                width: 60%;
+                margin: auto;
+                height: 17vw;
+                .subLeft {
+                    .subLeftTop h5 {
+                        font-size: 4vw;
+                    }
+                    .subLeftBottom p {
+                        font-size: 2.5vw;
+                    }
+                }
+                .subRight p {
+                    font-size: 3vw;
+                    padding-left: 5vw;
+                }
+            }
+            .btRightSide {
+                width: 95%;
+                margin: auto;
+                height: 17vw;
+                #leftSide img {
+                    margin-left: 15px;
+                    width: 17vw;
+                }
+                #rightSide h2 {
+                    font-size: 4.5vw;
+                }
+            }
+        }
+    }
+    .home {
+        display: flex;
+        flex-direction: column;
+        .sideBar {
+            flex: 100%;
+            width: 55vw;
+            margin: auto;
+            .sideBarTitle {
+                height: 7vw;
+                p {
+                    font-size: 4vw;
+                }
+            }
+            .sideBarMenu {
+                height: 70vw;
+                width: 100%;
+                a {
+                    font-size: 4vw;
+                }
+            }
+        }
+        .mainBody {
+            flex: 100%;
+            .adminMainBody {
+                .viewItem {
+                    width: 55vw;
+                    height: 40vw;
+                    .itemTitle {
+                        height: 7vw;
+                        p {
+                            font-size: 4vw;
+                        }
+                    }
+                    .itemContent {
+                        padding: 1.2vw 0;
+                        .itemContentLeft {
+                            height: 16vw;
+                            p {
+                                font-size: 2.5vw;
+                            }
+                            h3 {
+                                font-size: 4vw;
+                            }
+                        }
+                        .itemContentRight {
+                            height: 16vw;
+                            p {
+                                font-size: 2.5vw;
+                            }
+                            h3 {
+                                font-size: 4vw;
+                            }
+                        }
+                    }
+                    .itemFooter {
+                        height: 9vw;
+                        .itemFooterTitle {
+                            font-size: 4.5vw;
+                        }
+                        .itemFooterIcon {
+                            font-size: 70vw;
+                        }
+                        svg {
+                            font-size: 10vw;
+                        }
+                    }
+                }
+                .searchItem {
+                    width: 55vw;
+                    height: 40vw;
+                    margin-bottom: 1.2vw;
+                    #itemTitle {
+                        height: 7vw;
+                        p {
+                            font-size: 4vw;
+                        }
+                    }
+                    #itemBody {
+                        height: 29vw;
+                        margin-top: 1.7vw;
+                        margin-bottom: 1.7vw;
+                        svg {
+                            font-size: 20vw;
+                        }
+                        h3 {
+                            font-size: 5vw;
+                        }
+                    }
+                }
+                .myLinks {
+                    width: 55vw;
+                    height: 40vw;
+                    #title {
+                        height: 7vw;
+                        p {
+                            font-size: 4vw;
+                        }
+                    }
+                    #body {
+                        height: 22vw;
+                        margin-top: 5vw;
+                        a {
+                            font-size: 4.5vw;
+                            padding: 1.1vw;
+                            margin: 1vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint("min-lg-2") {
+    .mainHeader {
+        .bottomSide {
+            .btLeftSide {
+                .subLeft {
+                    .subLeftTop h5 {
+                        font-size: 20px;
+                    }
+                    .subLeftBottom p {
+                        font-size: 12px;
+                    }
+                }
+                .subRight p {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint("min-sm-2") {
+    .rightSide {
+        #proImg {
+            @include alignItems-2;
+        }
+    }
+}
+
+@include breakpoint("min-sm-1") {
+    .mainHeader {
+        .bottomSide {
+            .btLeftSide {
+                overflow: auto;
+            }
+            .btRightSide {
+                overflow: hidden;
+            }
+        }
+    }
+}

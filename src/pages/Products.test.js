@@ -1,12 +1,15 @@
-import {shallow} from 'enzyme';
-import Products from './Products';
+import { shallow } from "enzyme";
+import Products from "./Products";
 
-describe('Product', () => {
-    let productsContainer;
+describe("Product", () => {
+  let productsContainer;
 
-    beforeEach(() => productsContainer = shallow(<Products />));
+  beforeEach(() => (productsContainer = shallow(<Products />)));
 
-    it('should render the div element', () => {
-        expect(productsContainer.find('div')).toBeTruthy();
-    });
+  it("should render the div element", () => {
+    expect(productsContainer.find("div")).toBeTruthy();
+  });
+  it("renders Products correctly", () => {
+    expect(productsContainer).toMatchSnapshot();
+  });
 });

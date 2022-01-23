@@ -1,0 +1,14 @@
+@import "./variables/typography";
+@import "./mixins/typography";
+@import "MainNav";
+@import "MainHeader";
+@import "Home";
+@import "mobile";
+* {
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
