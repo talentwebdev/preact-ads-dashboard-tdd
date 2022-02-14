@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainHeader renders Header correctly 1`] = `ShallowWrapper {}`;
+
+exports[`MainHeader renders MainHeader correctly 1`] = `ShallowWrapper {}`;

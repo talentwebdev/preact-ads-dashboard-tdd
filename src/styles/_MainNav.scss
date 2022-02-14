@@ -1,0 +1,73 @@
+.mainNav {
+    display: flex;
+    height: 50px;
+    max-width: 80%;
+    margin: auto;
+    background-color: $mainNav-bg-color;
+    .logoSide {
+        display: flex;
+        flex: 20%;
+        #logoImg {
+            width: 100%;
+            text-align: right;
+            @include alignItems-3;
+            img {
+                margin-right: 3vw;
+                margin-left: 20px;
+                height: 30px;
+            }
+        }
+    }
+    .leftSide {
+        @include alignItems-2;
+        flex: 45%;
+        .links {
+            max-height: 50px;
+            width: 100%;
+            display: flex;
+            a {
+                color: $primary-color;
+                text-decoration: none;
+                font-size: $mainNav-fontSize-1450Screen;
+                margin-right: $mainNav-marginRight-FullScreen;
+                font-weight: $FontWeight-1;
+                font-family: $mainNav-font-family;
+            }
+        }
+        svg {
+            color: $primary-color;
+            font-size: 25px;
+            display: none;
+        }
+    }
+    .rightSide {
+        display: flex;
+        flex: 15%;
+        #proImg {
+            @include alignItems-1;
+            margin: 0;
+            padding: 0;
+            img {
+                border-radius: 3px;
+                text-align: center;
+                margin: 5px;
+                height: 40px;
+                cursor: pointer;
+            }
+        }
+        #proMenu {
+            @include alignItems-1;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            p {
+                color: $primary-color;
+                cursor: pointer;
+            }
+            .arrowBtn {
+                color: $primary-color;
+                cursor: pointer;
+            }
+        }
+    }
+}
